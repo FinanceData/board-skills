@@ -36,7 +36,69 @@ git clone https://github.com/FinanceData/board-skills.git
 cp -r board-skills/skills/* ~/.claude/skills/
 ```
 
-`npx skills add FinanceData/board-skills`처럼 `skills/<이름>/SKILL.md` 구조를 읽는 도구로도 설치할 수 있습니다.
+### Claude 외 다른 AI에 설치
+
+이 저장소의 스킬은 `skills/<이름>/SKILL.md`(이름과 설명 메타데이터 + 마크다운 지침) 형식이라 Agent Skills를 지원하는 도구에서 그대로 쓸 수 있습니다. 도구마다 스킬을 읽는 폴더만 다릅니다.
+
+#### 한 번에 설치: `npx skills`
+
+Node.js 22.20 이상이 필요합니다. 대상 도구는 `-a`로 지정하고, 전역 설치는 `-g`를 붙입니다. `-a`를 생략하면 설치할 도구를 고르는 화면이 나옵니다.
+
+```bash
+npx skills add FinanceData/board-skills -a codex
+```
+
+`-a`에는 `claude-code`, `codex`, `cursor`, `gemini-cli`, `github-copilot`, `opencode`, `windsurf`, `antigravity` 등을 쓸 수 있습니다. 스킬 하나만 설치하려면 `--skill board-agenda-review`를 붙입니다.
+
+#### 도구별 폴더에 직접 복사
+
+먼저 저장소를 받습니다.
+
+```bash
+git clone https://github.com/FinanceData/board-skills.git
+```
+
+그다음 `board-skills/skills/*`를 아래 폴더에 복사합니다.
+
+| 도구 | 프로젝트 폴더 | 전역 폴더 |
+|---|---|---|
+| Codex | `.agents/skills/` | `~/.agents/skills/` |
+| Cursor | `.agents/skills/` 또는 `.cursor/skills/` | `~/.cursor/skills/` |
+| Gemini CLI | `.gemini/skills/` 또는 `.agents/skills/` | `~/.gemini/skills/` |
+| GitHub Copilot | `.github/skills/` | `~/.copilot/skills/` |
+| OpenCode | `.agents/skills/` | `~/.config/opencode/skills/` |
+| Windsurf | `.windsurf/skills/` | `~/.codeium/windsurf/skills/` |
+
+예: Codex에 전역 설치(macOS·Linux·Git Bash)
+
+```bash
+mkdir -p ~/.agents/skills && cp -r board-skills/skills/* ~/.agents/skills/
+```
+
+예: Codex에 전역 설치(Windows PowerShell)
+
+```powershell
+New-Item -ItemType Directory -Force "$HOME\.agents\skills"; Copy-Item -Recurse -Force board-skills\skills\* "$HOME\.agents\skills\"
+```
+
+설치 후 안내:
+- 새로 넣은 스킬이 안 보이면 해당 도구를 다시 시작합니다.
+- Codex에서는 `/skills`를 실행하거나 `$board-agenda-review`처럼 `$`와 스킬 이름으로 부를 수 있습니다. Cursor는 Agent 채팅에서 `/`를 입력해 고릅니다. 그 밖에는 요청 내용이 스킬 설명과 맞으면 도구가 알아서 고릅니다.
+- Gemini CLI는 `gemini skills link board-skills/skills`로 복사 없이 연결할 수도 있습니다.
+- 위 폴더 경로는 2026년 10월 31일에 각 도구의 공식 문서와 `npx skills`의 문서로 확인했습니다. 도구가 업데이트되면 달라질 수 있으니 안 되면 해당 도구의 Skills 문서를 확인하세요.
+
+#### 스킬을 지원하지 않는 챗봇 (ChatGPT, Gemini, Claude 웹·앱 등)
+
+스킬 폴더를 읽지 못하는 환경에서는 `SKILL.md` 내용을 지침으로 붙여 넣어 씁니다.
+
+1. 쓰려는 스킬의 `SKILL.md`에서 맨 위 `---` 사이의 메타데이터를 뺀 본문을 복사합니다.
+2. 새 대화의 첫 메시지나 프로젝트(또는 Gem, 맞춤 GPT)의 지침 칸에 붙여 넣습니다.
+3. 안건 검토에는 `skills/board-agenda-review/references/prompt-template.md`의 공통 프롬프트를 그대로 쓰는 편이 가장 간단합니다.
+4. 스킬이 가리키는 참고 파일(`references/` 등)이 필요하면 그 내용도 같이 붙여 넣거나 파일로 올립니다.
+
+주의: `board-number-check`의 계산 스크립트는 코드를 실행할 수 있는 환경(터미널 에이전트, 코드 실행 기능이 있는 챗봇)에서만 돌아갑니다. 코드 실행이 없으면 `references/worked-example.md`의 계산식을 따라 직접 계산하거나 계산기로 확인하고, AI의 암산 결과를 그대로 믿지 마세요.
+
+미공개 안건이나 고객정보는 어떤 도구를 쓰든 회사가 허용한 환경이 아니면 넣지 않습니다(`board-ai-safety-check` 참고).
 
 ## 사용 예
 
