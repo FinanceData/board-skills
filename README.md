@@ -23,7 +23,7 @@ AI는 결론을 대신 내주는 도구가 아니라, 제한된 자료에서 근
 ### Claude Code 플러그인으로 설치
 
 ```bash
-/plugin marketplace add OWNER/board-skills
+/plugin marketplace add FinanceData/board-skills
 /plugin install board-skills@board-skills
 ```
 
@@ -32,11 +32,11 @@ AI는 결론을 대신 내주는 도구가 아니라, 제한된 자료에서 근
 `skills/` 아래 폴더를 `~/.claude/skills/`(전역) 또는 프로젝트의 `.claude/skills/`에 복사합니다.
 
 ```bash
-git clone https://github.com/OWNER/board-skills.git
+git clone https://github.com/FinanceData/board-skills.git
 cp -r board-skills/skills/* ~/.claude/skills/
 ```
 
-`npx skills add OWNER/board-skills`처럼 `skills/<이름>/SKILL.md` 구조를 읽는 도구로도 설치할 수 있습니다.
+`npx skills add FinanceData/board-skills`처럼 `skills/<이름>/SKILL.md` 구조를 읽는 도구로도 설치할 수 있습니다.
 
 ## 사용 예
 
