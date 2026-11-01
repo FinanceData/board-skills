@@ -1,6 +1,6 @@
 # board-skills
 
-임원 및 사외이사가 AI로 **더 나은 질문과 판단**을 준비하도록 돕는 스킬 모음입니다. 금융연수원 사외이사 과정 "더 나은 질문과 판단을 위한 AI"(120분, 교안 44장)의 내용을 실제로 쓸 수 있는 Claude 스킬로 옮겼습니다.
+임원 및 사외이사가 AI로 **더 나은 질문과 판단**을 준비하도록 돕는 스킬 모음입니다. 
 
 각 `SKILL.md`는 에이전트가 그대로 따를 수 있도록 **실행 절차(명령형 지시), 금지 규칙과 예외 처리, 입력·출력 예시, 자유도(매뉴얼대로 할 영역과 판단해도 되는 영역)**로 구성했습니다. `references/`, `assets/`, `scripts/`의 가상 사례 파일은 모두 **테스트 예시**입니다.
 
@@ -16,9 +16,8 @@ AI는 결론을 대신 내주는 도구가 아니라, 제한된 자료에서 근
 | [`board-number-check`](skills/board-number-check/SKILL.md) | 예산 합계, 회수기간 같은 숫자를 검증할 때 | 스크립트로 계산한 합계 대조와 실현율 민감도 |
 | [`board-expert-questions`](skills/board-expert-questions/SKILL.md) | 내 전문분야 관점의 질문이 필요할 때 | 분야별 점검 부분, 질문, 요청자료, 다관점 통합 |
 | [`board-compliance-check`](skills/board-compliance-check/SKILL.md) | 법령·감독 지침·모범사례와 맞는지 볼 때 | 원문 → 적용 → 대조 → 확인 표와 담당자 질문 |
-| [`board-environment-brief`](skills/board-environment-brief/SKILL.md) | 금리·규제 같은 환경 변화를 읽을 때 | 변화 → 영향 경로 → 반대 시나리오 → 질문 |
+| [`board-environ`](skills/board-environ/SKILL.md) | 금리·규제 같은 환경 변화를 읽을 때 | 변화 → 영향 경로 → 반대 시나리오 → 질문 |
 | [`board-ai-safety-check`](skills/board-ai-safety-check/SKILL.md) | 자료를 AI에 넣기 전 | 입력 가능 여부 판단, 학습·보관·접근·전송 점검 |
-| [`board-lecture-guide`](skills/board-lecture-guide/SKILL.md) | 이 과정을 강의하는 강사 | 시간표, 준비 체크리스트, 장별 노트, 예상 질문 |
 
 ## 설치
 
@@ -139,13 +138,10 @@ skills/
   board-number-check/      숫자 검증 (scripts/check_numbers.py)
   board-expert-questions/  전문분야별 질문
   board-compliance-check/  규정 검토 절차
-  board-environment-brief/ 금융환경 변화 읽기
+  board-environ/           금융환경 변화 읽기
   board-ai-safety-check/   AI 입력 전 점검
-  board-lecture-guide/     강의 진행 (references/lecture-notes.md)
 ```
-
-강의용 HTML/PDF 교안 파일은 이 저장소에 포함하지 않았습니다.
 
 ## 라이선스
 
-[MIT](LICENSE). 강의 교안이 사용한 Reveal.js(MIT)와 Pretendard(SIL OFL)의 라이선스는 해당 프로젝트를 따릅니다.
+[MIT](LICENSE)
