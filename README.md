@@ -17,7 +17,7 @@ AI는 결론을 대신 내주는 도구가 아니라, 제한된 자료에서 근
 | [`board-expert-questions`](skills/board-expert-questions/SKILL.md) | 내 전문분야 관점의 질문이 필요할 때 | 분야별 점검, 질문, 요청자료 |
 | [`board-compliance-check`](skills/board-compliance-check/SKILL.md) | 법령·감독 지침과 맞는지 볼 때 | 원문 → 적용 → 대조 → 확인 표와 담당자 질문 |
 | [`board-environ`](skills/board-environ/SKILL.md) | 금리·규제 같은 환경 변화 검토 | 변화 → 영향 경로 → 반대 시나리오 → 질문 |
-| [`board-ai-safety-check`](skills/board-ai-safety-check/SKILL.md) | 자료를 AI에 안전 점검  | 입력 가능 여부 판단, 학습·보관·접근·전송 점검 |
+| [`board-ai-safety-check`](skills/board-ai-safety-check/SKILL.md) | AI 입력 전 안전 점검 | 입력 가능 여부 판단, 학습·보관·접근·전송 점검 |
 
 ## 설치
 
