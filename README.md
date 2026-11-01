@@ -12,12 +12,12 @@ AI는 결론을 대신 내주는 도구가 아니라, 제한된 자료에서 근
 
 | 스킬 | 언제 쓰나 | 결과물 |
 |---|---|---|
-| [`board-agenda-review`](skills/board-agenda-review/SKILL.md) | 받은 이사회 안건을 검토할 때 | 검토 메모 1장, 우선 질문 5개, 추가 요청자료 3개 |
-| [`board-number-check`](skills/board-number-check/SKILL.md) | 예산 합계, 회수기간 같은 숫자를 검증할 때 | 스크립트로 계산한 합계·비율 대조와 회수기간 민감도 |
-| [`board-expert-questions`](skills/board-expert-questions/SKILL.md) | 내 전문분야 관점의 질문이 필요할 때 | 분야별 점검 부분, 질문, 요청자료, 다관점 통합 |
-| [`board-compliance-check`](skills/board-compliance-check/SKILL.md) | 법령·감독 지침·모범사례와 맞는지 볼 때 | 원문 → 적용 → 대조 → 확인 표와 담당자 질문 |
-| [`board-environ`](skills/board-environ/SKILL.md) | 금리·규제 같은 환경 변화를 읽을 때 | 변화 → 영향 경로 → 반대 시나리오 → 질문 |
-| [`board-ai-safety-check`](skills/board-ai-safety-check/SKILL.md) | 자료를 AI에 넣기 전 | 입력 가능 여부 판단, 학습·보관·접근·전송 점검 |
+| [`board-agenda-review`](skills/board-agenda-review/SKILL.md) | 이사회 안건을 검토할 때 | 검토 메모 1장, 우선 질문 5개, 추가 요청자료 3개 |
+| [`board-number-check`](skills/board-number-check/SKILL.md) | 회수기간 같은 숫자를 검증 | 계산한 합계·비율 대조와 회수기간 민감도 |
+| [`board-expert-questions`](skills/board-expert-questions/SKILL.md) | 내 전문분야 관점의 질문이 필요할 때 | 분야별 점검, 질문, 요청자료 |
+| [`board-compliance-check`](skills/board-compliance-check/SKILL.md) | 법령·감독 지침과 맞는지 볼 때 | 원문 → 적용 → 대조 → 확인 표와 담당자 질문 |
+| [`board-environ`](skills/board-environ/SKILL.md) | 금리·규제 같은 환경 변화 검토 | 변화 → 영향 경로 → 반대 시나리오 → 질문 |
+| [`board-ai-safety-check`](skills/board-ai-safety-check/SKILL.md) | 자료를 AI에 안전 점검  | 입력 가능 여부 판단, 학습·보관·접근·전송 점검 |
 
 ## 설치
 
