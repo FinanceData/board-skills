@@ -2,7 +2,7 @@
 
 - 테스트일: 2026년 11월 1일
 - 대상: `skills/` 아래 스킬 6개
-- 테스트 문서: [`fixtures/doam-board-agenda.pdf`](fixtures/doam-board-agenda.pdf) (가상 도담저축은행 이사회 의안 제3호, 5쪽, 원본 HTML 포함)
+- 테스트 문서: [`fixtures/doam-board-agenda.pdf`](fixtures/doam-board-agenda.pdf) (가상 도담은행 이사회 의안 제3호, 5쪽, 원본 HTML 포함)
 - 정답표: [`answer-key.md`](answer-key.md) (확인 지점 17개, 금지 규칙 9개)
 - 결과 문서: [`results/`](results/) (2차, 개선 반영 후). 1차 결과 파일은 삭제했고 git 기록에만 남아 있습니다.
 - 실행 기록: [`log/`](log/) (스킬별로 읽은 파일, 실행한 명령, 웹 조회 내역)
