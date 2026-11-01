@@ -5,7 +5,7 @@
   sum      세부 예산 항목을 더해 승인 요청액과 대조한다.
   payback  편익 실현율과 운영비에 따른 단순 회수기간을 계산한다.
 
-예
+테스트 예시 (가상 A은행 사례. 정답은 references/worked-example.md)
   python check_numbers.py sum --requested 150 개발=90 시스템연계=35 인프라=25 교육전환=15
   python check_numbers.py payback --investment 150 --benefit 45 --opex 12 --build-months 18
 
